@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-header">
+        <ic-icon size="22" icon="formatListBulleted"></ic-icon>
+        <span>Create Todo</span>
+    </div>
+    <div class="card-body">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control"
+                placeholder="What do you need to do?" aria-describedby="btn-add"
+                [(ngModel)]="todoText" required>
+
+            <button class="btn btn-outline-secondary" type="button"
+                id="btn-color" [style.background]="color"
+                [(colorPicker)]="color">
+
+                <ic-icon size="24" icon="eyedropperVariant"></ic-icon>
+            </button>
+
+            <button class="btn btn-outline-secondary" type="button"
+                id="btn-add" (click)="addTodo()">
+
+                <ic-icon size="24" color="primary" icon="notePlusOutline"></ic-icon>
+            </button>
+        </div>
+    </div>
+</div>

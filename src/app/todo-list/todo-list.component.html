@@ -1,0 +1,17 @@
+<div *ngFor="let todo of todos" class="card mb-2" [ngStyle]="{ 'background-color': todo.color }">
+
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <h6 class="card-subtitle text-muted">
+      {{ todo.dateCreated | date:"YYYY-MM-dd HH:mm" }}
+    </h6>
+
+    <button type="button" class="btn btn-outline-danger btn-sm" (click)="deleteTodo(todo)">
+      <ic-icon size="22" icon="deleteForever"></ic-icon>
+    </button>
+  </div>
+
+  <div class="card-body">
+    <p class="card-text">{{ todo.content }}</p>
+  </div>
+
+</div>

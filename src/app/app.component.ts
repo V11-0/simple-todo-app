@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IconService } from '@visurel/iconify-angular';
+import { appIcons } from './app.icons';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'simple-todo-app';
+
+  constructor(iconService: IconService) {
+    iconService.registerAll(appIcons);
+  }
 }
